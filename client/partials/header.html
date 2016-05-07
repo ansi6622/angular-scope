@@ -5,19 +5,45 @@
 </scopes>
 
 <div ng-controller="HeaderCtrl">
+
   <h1>HeaderCtrl <i>partial</i></h1>
   <scopes>
     <p>$scope.headerCtrl.name = <b>{{headerCtrl.name}}</b></p>
     <p>$scope.mainCtrl.name = <b>{{mainCtrl.name}}</b></p>
   </scopes>
 
-  <div>
-    <se-post-no-isolate></se-post-no-isolate>
-    <se-post-isolate></se-post-isolate>
-    <se-post-isolate-bind-scope get-ctrl-scope='{ctrl: [mainCtrl, headerCtrl]}'></se-post-isolate-bind-scope>
-    <se-post-isolate-bind-scope-fn
+  <!-- directive examples -->
+  <div class="directive-examples">
+    <!-- exmaple 1 -->
+    <se-no-isolate></se-no-isolate>
+
+    <!-- exmaple 2 -->
+    <se-isolate></se-isolate>
+
+    <!-- exmaple 3 -->
+    <se-isolate-two-way
+      get-ctrl-scope='{ctrl: [mainCtrl, headerCtrl]}'></se-isolate-two-way>
+
+    <!-- exmaple 4 -->
+    <se-isolate-function
       hi-func='sayHello(name, age)'
-      say-bye='sayGoodbye(name)'></se-post-isolate-bind-scope-fn>
-    <scope-local-prop say-hi="{{headerCtrl.name}} say's hi!"></scope-local-prop>
+      say-bye='sayGoodbye(name)'></se-isolate-function>
+
+    <!-- exmaple 5 -->
+    <se-isolate-attr
+      say-hi="{{headerCtrl.name}} say's hi!"></se-isolate-attr>
+
+    <!-- exmaple 6 -->
+    <se-isolate-attr-bind-ctrl
+      say-hi="{{headerCtrl.name}} say's hi!"></se-isolate-attr-bind-ctrl>
+
+    <!-- exmaple 7 -->
+    <se-isolate-transclude
+      props="{color: 'red', example_id: 7}"
+      name="Transclude Example"
+      attr-renamed-name="Attr Property Renamed On Directive Instance">
+        <p>Example of Basic Transclusion <b>(see: example 7 in <code>partials/header.html</code>)</b></p>
+      </se-isolate-transclude>
   </div>
+
 </div>

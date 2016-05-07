@@ -2,7 +2,7 @@ h1 i {
   font-size: 70%;
 }
 ng-include {
-  border: 5px dashed #333;
+  border: 2px dashed #333;
   display: block;
   padding: 10px;
   margin: 10px;
@@ -13,7 +13,7 @@ ng-include:before {
 }
 
 div[ng-controller] {
-  border: 5px dashed #333;
+  border: 2px dashed #333;
   display: block;
   padding: 20px;
   margin: 10px;
@@ -26,7 +26,7 @@ div[ng-controller]:before {
 scopes {
   display: inline-block;
   border-radius: 5px;
-  background: #333;
+  background: #555;
   padding: 5px 10px;
   margin-left: 10px;
   margin-bottom: 15px;
@@ -40,7 +40,7 @@ scopes p b {
 scopes p {
   margin: 5px 0 5px 0;
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-size: 13px;
   color: white;
 }
@@ -50,62 +50,98 @@ scopes p oos {
   font-weight: bold;
 }
 
-se-post-no-isolate {
-  border: 5px dashed #333;
+se-no-isolate {
+  border: 3px dashed purple;
   display: inline-block;
-  width: 100%;
+  width: 98%;
   padding: 20px;
   margin: 10px;
 }
 
-se-post-no-isolate:before {
-  content: 'se-post-no-isolate directive';
+se-no-isolate:before {
+  content: 'se-no-isolate directive';
 }
 
-se-post-isolate {
-  border: 5px solid purple;
+se-isolate {
+  border: 3px solid purple;
   display: inline-block;
-  width: 100%;
+  width: 98%;
   padding: 20px;
   margin: 10px;
 }
 
-se-post-isolate:before {
-  content: 'se-post-isolate directive';
+se-isolate:before {
+  content: 'se-isolate directive';
 }
 
-se-post-isolate-bind-scope {
-  border: 5px solid purple;
+se-isolate-two-way {
+  border: 3px solid purple;
   display: inline-block;
-  width: 100%;
+  width: 98%;
   padding: 20px;
   margin: 10px;
 }
 
-se-post-isolate-bind-scope:before {
-  content: 'se-post-isolate-bind-scope directive';
+se-isolate-two-way:before {
+  content: 'se-isolate-two-way directive';
 }
 
-se-post-isolate-bind-scope-fn {
-  border: 5px solid purple;
+se-isolate-function {
+  border: 3px solid purple;
   display: inline-block;
-  width: 100%;
+  width: 98%;
   padding: 20px;
   margin: 10px;
 }
 
-se-post-isolate-bind-scope-fn:before {
-  content: 'se-post-isolate-bind-scope-fn directive';
+se-isolate-function:before {
+  content: 'se-isolate-function directive';
 }
 
-scope-local-prop {
-  border: 5px solid purple;
+se-isolate-attr {
+  border: 3px solid purple;
   display: inline-block;
-  width: 100%;
+  width: 98%;
   padding: 20px;
   margin: 10px;
 }
 
-scope-local-prop:before {
-  content: 'scope-local-prop directive';
+se-isolate-attr:before {
+  content: 'se-isolate-attr directive';
+}
+
+se-isolate-attr-bind-ctrl {
+  border: 3px solid purple;
+  display: inline-block;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-isolate-attr-bind-ctrl:before {
+  content: 'se-isolate-attr-bind-ctrl directive';
+}
+
+.directive-examples > div {
+  border: 3px solid purple;
+  display: inline-block;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+.directive-examples > div:before {
+  content: 'se-isolate-attr-bind-ctrl directive';
+}
+
+se-isolate-transclude {
+  border: 3px solid purple;
+  display: inline-block;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-isolate-transclude:before {
+  content: 'se-isolate-attr-bind-ctrl directive';
 }

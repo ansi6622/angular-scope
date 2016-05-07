@@ -1,0 +1,23 @@
+<h1>header <i>partial</i></h1>
+<scopes>
+  <p>$scope.mainCtrl.name = <b>{{mainCtrl.name}}</b></p>
+  <p>$scope.headerCtrl.name = <b>{{headerCtrl.name}}</b><oos>out-of-scope<oos></p>
+</scopes>
+
+<div ng-controller="HeaderCtrl">
+  <h1>HeaderCtrl <i>partial</i></h1>
+  <scopes>
+    <p>$scope.headerCtrl.name = <b>{{headerCtrl.name}}</b></p>
+    <p>$scope.mainCtrl.name = <b>{{mainCtrl.name}}</b></p>
+  </scopes>
+
+  <div>
+    <se-post-no-isolate></se-post-no-isolate>
+    <se-post-isolate></se-post-isolate>
+    <se-post-isolate-bind-scope get-ctrl-scope='{ctrl: [mainCtrl, headerCtrl]}'></se-post-isolate-bind-scope>
+    <se-post-isolate-bind-scope-fn
+      hi-func='sayHello(name, age)'
+      say-bye='sayGoodbye(name)'></se-post-isolate-bind-scope-fn>
+    <scope-local-prop say-hi="{{headerCtrl.name}} say's hi!"></scope-local-prop>
+  </div>
+</div>

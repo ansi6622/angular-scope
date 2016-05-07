@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="ScopeExampleApp">
+<head>
+  <title>ScopeExampleApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/stylesheets/style.css">
+  <base href="/">
+</head>
+<body>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <!-- Angular -->
+  <script src="app.js"></script>
+  <script src="controllers/main.ctrl.js"></script>
+  <script src="controllers/header.ctrl.js"></script>
+  <script src="directives/post.directive.js"></script>
+
+  <div ng-controller="MainCtrl">
+    <h1>MainCtrl <i>partial</i></h1>
+    <scopes>
+      <p>$scope.mainCtrl.name = <b>{{mainCtrl.name}}</b></p>
+      <p>$scope.headerCtrl.name = <oos>out-of-scope<oos></p>
+    </scopes>
+    <div id="content" class="container">
+      <div class="row">
+        <ng-include src="'/partials/header.html'"></ng-include>
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

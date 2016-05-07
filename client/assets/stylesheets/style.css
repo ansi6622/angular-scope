@@ -1,0 +1,111 @@
+h1 i {
+  font-size: 70%;
+}
+ng-include {
+  border: 5px dashed #333;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+}
+
+ng-include:before {
+  content: 'ng-include';
+}
+
+div[ng-controller] {
+  border: 5px dashed #333;
+  display: block;
+  padding: 20px;
+  margin: 10px;
+}
+
+div[ng-controller]:before {
+  content: 'ng-controller';
+}
+
+scopes {
+  display: inline-block;
+  border-radius: 5px;
+  background: #333;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+scopes p b {
+  background: rgb(255, 223, 93);
+  color: black;
+}
+
+scopes p {
+  margin: 5px 0 5px 0;
+  display: block;
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: white;
+}
+
+scopes p oos {
+  background: red;
+  font-weight: bold;
+}
+
+se-post-no-isolate {
+  border: 5px dashed #333;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-post-no-isolate:before {
+  content: 'se-post-no-isolate directive';
+}
+
+se-post-isolate {
+  border: 5px solid purple;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-post-isolate:before {
+  content: 'se-post-isolate directive';
+}
+
+se-post-isolate-bind-scope {
+  border: 5px solid purple;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-post-isolate-bind-scope:before {
+  content: 'se-post-isolate-bind-scope directive';
+}
+
+se-post-isolate-bind-scope-fn {
+  border: 5px solid purple;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-post-isolate-bind-scope-fn:before {
+  content: 'se-post-isolate-bind-scope-fn directive';
+}
+
+scope-local-prop {
+  border: 5px solid purple;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+}
+
+scope-local-prop:before {
+  content: 'scope-local-prop directive';
+}

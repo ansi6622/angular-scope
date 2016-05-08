@@ -95,3 +95,47 @@ angular.module('ScopeExampleApp')
     }
 
   })
+
+  .directive('seNgView', function(){
+
+    return {
+      scope: {},
+      transclude: true,
+      templateUrl: 'templates/example-8.tmpl.html',
+      link: function (scope, el, attrs, fn) {
+      },
+      controller: function ($scope) {
+        $scope.parents = {};
+
+        // don't do this, just for illustration
+        function parentObject (scope, name) {
+          var path = name, depth = 1;
+          while ( !_.has(scope, path) ) {
+            path = _.repeat('$parent.', depth++) + name;
+          }
+          return _.first( _.at(scope, path) );
+        }
+
+        this.injectScope = function (scope) {
+          // custom deep object key locator (don't do this)
+          var myMainCtrl = parentObject(scope, 'mainCtrl');
+          $scope.parents.mainCtrl = myMainCtrl;
+
+          // built-in angular parent inheritance
+          // $scope.parents.mainCtrl = scope.mainCtrl;
+        }
+
+      }
+    }
+
+  })
+  .directive('seNgViewChild', function(){
+
+    return {
+      require: '^^seNgView',
+      link: function (scope, el, attrs, fn) {
+        fn.injectScope(scope);
+      }
+    }
+
+  })

@@ -143,5 +143,17 @@ se-isolate-transclude {
 }
 
 se-isolate-transclude:before {
-  content: 'se-isolate-attr-bind-ctrl directive';
+  content: 'se-isolate-transclude directive';
+}
+
+se-ng-view {
+  border: 3px solid orange;
+  display: inline-block;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+se-ng-view:before {
+  content: 'se-ng-view directive';
 }

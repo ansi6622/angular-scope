@@ -51,7 +51,7 @@ scopes p oos {
 }
 
 se-no-isolate {
-  border: 3px dashed purple;
+  border: 2px dashed purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -63,7 +63,7 @@ se-no-isolate:before {
 }
 
 se-isolate {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -75,7 +75,7 @@ se-isolate:before {
 }
 
 se-isolate-two-way {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -87,7 +87,7 @@ se-isolate-two-way:before {
 }
 
 se-isolate-function {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -99,7 +99,7 @@ se-isolate-function:before {
 }
 
 se-isolate-attr {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -111,7 +111,7 @@ se-isolate-attr:before {
 }
 
 se-isolate-attr-bind-ctrl {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -123,7 +123,7 @@ se-isolate-attr-bind-ctrl:before {
 }
 
 .directive-examples > div {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -135,7 +135,7 @@ se-isolate-attr-bind-ctrl:before {
 }
 
 se-isolate-transclude {
-  border: 3px solid purple;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -147,7 +147,7 @@ se-isolate-transclude:before {
 }
 
 se-ng-view {
-  border: 3px solid orange;
+  border: 2px solid purple;
   display: inline-block;
   width: 98%;
   padding: 20px;
@@ -156,4 +156,21 @@ se-ng-view {
 
 se-ng-view:before {
   content: 'se-ng-view directive';
+}
+
+div[ng-view] {
+  border: 2px dashed #333;
+  display: inline-block;
+  width: 98%;
+  padding: 20px;
+  margin: 10px;
+}
+
+div[ng-view]:before {
+  content: 'ng-view';
+}
+
+.thinpad {
+  padding: 2px 4px;
+  font-weight: 600;
 }

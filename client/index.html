@@ -28,15 +28,15 @@
   <script src="directives/example.directive.js"></script>
 
   <div ng-controller="MainCtrl">
-    <h1>MainCtrl <i>partial</i></h1>
+    <h1>MainCtrl <i><code>index.html</code></i></h1>
     <scopes>
       <p>$scope.mainCtrl.name = <b>{{mainCtrl.name}}</b></p>
       <p>$scope.headerCtrl.name = <oos>out-of-scope<oos></p>
     </scopes>
     <div id="content" class="container">
       <div class="row">
-        <ng-include src="'/partials/header.html'"></ng-include>
         <div ng-view></div>
+        <ng-include src="'/partials/header.html'"></ng-include>
       </div>
     </div>
   </div>

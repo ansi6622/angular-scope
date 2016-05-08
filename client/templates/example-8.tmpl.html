@@ -5,9 +5,9 @@
       <p>$scope.mainCtrl.name = <oos>out-of-scope<oos></p>
       <p>$scope.headerCtrl.name = <oos>out-of-scope<oos></p>
     </scopes>
-    <p>Notice that even though this directive is nested within MainCtrl,
-    We don't have access to MainCtrl's scope because this directive has declared
-    an isolate scope.</p>
+    <p>Notice that even though this directive is nested within an ng-view whose parent
+      is MainCtrl, We don't have access to MainCtrl's scope because this directive has declared
+      an isolate scope.</p>
   </div>
 
   <ng-transclude></ng-transclude>
@@ -18,8 +18,8 @@
       <p>$scope.parents.mainCtrl.name = <b>{{parents.mainCtrl.name}}</b></p>
     </scopes>
     <p>By transcluding a directive (seNgViewChild) which doesn't have an isolate scope
-      and require's seNgView, I have bypassed the isolate scope on seNgView
-      and injected a parent scope into seNgView. (Don't actually do this, it's just
-      to illustrate an example.)</p>
+      and using <code>require</code> seNgView, we have bypassed the isolate scope on seNgView
+      and injected a parent scope into seNgView. <b class="alert alert-warning thinpad">Don't actually do this, it's just
+      to illustrate an example!</b></p>
   </div>
 </div>

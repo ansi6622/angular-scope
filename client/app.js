@@ -3,7 +3,7 @@ angular.module('ScopeExampleApp', ['ui.bootstrap','ngRoute','ngAnimate']);
 angular.module('ScopeExampleApp').config(function($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                template : '<se-ng-view><se-ng-view-child></se-ng-view-child></se-ng-view>'
+                templateUrl : 'partials/view.html'
             }).otherwise({
                 redirectTo: '/'
             });
